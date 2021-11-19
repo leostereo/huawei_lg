@@ -5,23 +5,17 @@ namespace App\Http\Controllers;
 use phpseclib3\Net\SSH2;
 use Illuminate\Http\Request;
 
-class FormController extends Controller
+class HomeController extends Controller
 {
-
 
         public function process(Request $request){
 
 
-
-
-   # return redirect('/')->with('status', 'Profile updated!');
-
-
-
-
+		#dd($request->all());
 
 		    $request->validate([
 			'ip' => 'required|ip',
+            		'g-recaptcha-response' => 'required|captcha',
 		    ],
 		    [
 			'ip.required' => 'Ingresa una direccion ip valida!'
@@ -89,25 +83,10 @@ class FormController extends Controller
 			
 		}
 		
-
-		
 		array_unshift($output_arr,$info);
-
-                return view('welcome', compact('output_arr'));
-
-    		#return Redirect::route( '/' )->with( 'output_arr', $output_arr );
-
-
-		#return redirect('/')->with(compact('output_arr'));
-
-    		#return redirect('/')->with('status', 'Profile updated!');
-                #print_r($out_arr);
-
-
+                return view('home', compact('output_arr'));
 
 
         }
 
-
-   //
 }

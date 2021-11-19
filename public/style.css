@@ -2,6 +2,7 @@
 background-color: black;
 color: white;
 font-family: "Lucida Console", "Courier New", monospace;
-padding-left: 5%;
-padding-bottom: 5%;
+padding: 5%;
+height: 50rem;
+overflow-y: scroll;
 }

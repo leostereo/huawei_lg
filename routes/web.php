@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\HomeController;
 
 
 
@@ -17,8 +18,18 @@ use App\Http\Controllers\FormController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    return view('home');
+})->name('home');
 
-Route::post('/form_process', [FormController::class, 'process'])->name('form_process');
+Route::post('/', [HomeController::class, 'process'])->name('home');
 
+
+
+
+
+#Route::get('/home', function () {
+#    return view('home');
+#})->name('home');
+
+
+#Route::post('/home', [HomeController::class, 'process'])->name('home');
