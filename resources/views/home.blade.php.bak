@@ -30,7 +30,6 @@
     <body class="antialiased">
 
 
-
 <div class="container h-100 mt-5">
     <div class="row h-100 justify-content-center align-items-center">
 	<br><img class="m-5" src="{{ url('logo.png') }}"><br>
@@ -38,35 +37,16 @@
     <div class="row h-100 justify-content-center align-items-center">
         <div class="col-10 col-md-8 col-lg-6">
             <!-- Form -->
-            <form class="form-example"  method="post" action="{{ route('form_process') }}">
+            <form class="form-example"  method="post" action="{{ route('home') }}">
 
 	      @csrf
   
-<!--<div class="form-check">
-  <input class="form-check-input" type="radio" name="operation" id="operation" value="list" checked>
-  <label class="form-check-label" for="flexRadioDefault1">
-    Lista de peers
-  </label>
-</div>
--->
 <div class="form-check">
   <input class="form-check-input" type="radio" name="operation" id="operation" value="route" checked>
   <label class="form-check-label" for="flexRadioDefault1">
     Ver rutas
   </label>
 </div>
-<!--<div class="form-check">
-  <input class="form-check-input" type="radio" name="operation" id="operation" value="adv">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Prefijos advertidos
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="operation" id="operation" value="rec">
-  <label class="form-check-label" for="flexRadioDefault1">
-    Prefijos recibidos
-  </label>
-</div>-->
 <div class="form-check">
   <input class="form-check-input" type="radio" name="operation" id="operation" value="ping">
   <label class="form-check-label" for="flexRadioDefault1">
@@ -98,6 +78,8 @@
         <option>21</option>
       </select>
     </div>
+
+
 <br>
 <br>
 <br>
@@ -144,7 +126,7 @@
 @endif
 
 
-{{ dd($__data) }}
+<!--{{ dd($__data) }}-->
 
 
 

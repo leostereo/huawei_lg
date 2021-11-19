@@ -15,7 +15,6 @@ class HomeController extends Controller
 
 		    $request->validate([
 			'ip' => 'required|ip',
-            		'g-recaptcha-response' => 'required|captcha',
 		    ],
 		    [
 			'ip.required' => 'Ingresa una direccion ip valida!'
